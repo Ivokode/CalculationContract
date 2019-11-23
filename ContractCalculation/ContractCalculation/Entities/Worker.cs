@@ -33,7 +33,18 @@ namespace ContractCalculation.Entities
             Contracts.Remove(contract);
         }
 
-       
+        public double income(int year, int mouth)
+        {
+            double sum = BaseSalary;
 
+            foreach (HourContract contract in Contracts)
+            {
+                if (contract.Date.Year == year && contract.Date.Month == mouth)
+                {
+                    sum += contract.TotalValue();
+                }
+            }
+            return sum;
+        }
     }
 }
