@@ -26,6 +26,5 @@ namespace ContractCalculation.Entities
             return Hour * ValuePerHour;
         }
 
-        public void AddContracts()
     }
 }
